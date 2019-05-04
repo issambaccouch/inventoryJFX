@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.FormClientProductsController">
+   <children>
+      <JFXTabPane prefHeight="600.0" prefWidth="800.0">
+         <tabs>
+            <Tab fx:id="allTab" onSelectionChanged="#productsTab" text="Produits">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="search" layoutX="455.0" layoutY="37.0" prefHeight="33.0" prefWidth="265.0" promptText="Cherchez ici.." />
+                        <AnchorPane fx:id="anchoreProducts" layoutX="8.0" layoutY="82.0" prefHeight="481.0" prefWidth="800.0" />
+                        <ComboBox fx:id="combobox" layoutX="14.0" layoutY="41.0" onAction="#categorySearch" prefHeight="33.0" prefWidth="181.0" promptText="Chercher par catégorie">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </ComboBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="mineTab" onSelectionChanged="#myProductsTab" text="Mes produits">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tv" layoutX="14.0" layoutY="105.0" onMouseClicked="#selected" prefHeight="357.0" prefWidth="654.0">
+                           <columns>
+                              <TableColumn fx:id="nom" prefWidth="127.0" text="Nom" />
+                              <TableColumn fx:id="prix" prefWidth="104.0" text="Prix" />
+                              <TableColumn fx:id="desc" prefWidth="171.0" text="Description" />
+                              <TableColumn fx:id="cat" prefWidth="139.0" text="Categorie" />
+                              <TableColumn fx:id="date" prefWidth="112.0" text="Date d'expiration" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="sup" layoutX="429.0" layoutY="487.0" mnemonicParsing="false" onAction="#sup" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #ff4c4c;" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="modif" layoutX="230.0" layoutY="487.0" mnemonicParsing="false" onAction="#modif" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #5cb85c;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="ajout" layoutX="33.0" layoutY="487.0" mnemonicParsing="false" onAction="#ajout" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #4285F4;" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <JFXTextField fx:id="search1" layoutX="408.0" layoutY="43.0" prefHeight="33.0" prefWidth="265.0" promptText="Cherchez ici.." />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="mineTab1" onSelectionChanged="#myProductsTab" text="Mes produits en attente">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvAttente" layoutX="14.0" layoutY="105.0" onMouseClicked="#selectedAttente" prefHeight="357.0" prefWidth="654.0">
+                           <columns>
+                              <TableColumn fx:id="nomAttente" prefWidth="127.0" text="Nom" />
+                              <TableColumn fx:id="prixAttente" prefWidth="104.0" text="Prix" />
+                              <TableColumn fx:id="descAttente" prefWidth="171.0" text="Description" />
+                              <TableColumn fx:id="catAttente" prefWidth="139.0" text="Categorie" />
+                              <TableColumn fx:id="dateAttente" prefWidth="112.0" text="Date d'expiration" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="supAttente" layoutX="429.0" layoutY="487.0" mnemonicParsing="false" onAction="#supAttente" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #ff4c4c;" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="modifAttente" layoutX="230.0" layoutY="487.0" mnemonicParsing="false" onAction="#modifAttent" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #5cb85c;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="mineTab2" onSelectionChanged="#myProductsTab" text="Mes produits refusés">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvRefuser" layoutX="14.0" layoutY="105.0" onMouseClicked="#selectedRefuser" prefHeight="357.0" prefWidth="654.0">
+                           <columns>
+                              <TableColumn fx:id="nomRefuser" prefWidth="127.0" text="Nom" />
+                              <TableColumn fx:id="prixRefuser" prefWidth="104.0" text="Prix" />
+                              <TableColumn fx:id="descRefuser" prefWidth="171.0" text="Description" />
+                              <TableColumn fx:id="catRefuser" prefWidth="139.0" text="Categorie" />
+                              <TableColumn fx:id="dateRefuser" prefWidth="112.0" text="Date d'expiration" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="supRefuser" layoutX="429.0" layoutY="487.0" mnemonicParsing="false" onAction="#supRef" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #ff4c4c;" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="modifRefuser" layoutX="230.0" layoutY="487.0" mnemonicParsing="false" onAction="#modifRef" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #5cb85c;" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

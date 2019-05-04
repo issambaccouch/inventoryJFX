@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #00bcd40a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ShowProductController">
+   <children>
+      <ImageView fx:id="imageP" fitHeight="245.0" fitWidth="395.0" layoutX="78.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#c1c1c1" height="102.55" offsetX="10.0" offsetY="10.0" radius="68.1925" width="172.22" />
+         </effect>
+         <image>
+            <Image url="@../../../../images/11f1dm.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="nameP" layoutX="184.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="182.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Label layoutX="163.0" layoutY="24.0" text="Nom de produit:" textFill="#48aed0" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="465.0" text="Description:" textFill="#48aed0" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="622.0" layoutY="307.0" text="Prix:" textFill="#48aed0" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="622.0" layoutY="192.0" text="Catégorie:" textFill="#48aed0" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Text fx:id="catP" layoutX="629.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="141.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="price" layoutX="629.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="101.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="descP" layoutX="118.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="466.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btn" layoutX="630.0" layoutY="545.0" onAction="#contactV" prefHeight="34.0" prefWidth="141.0" style="-fx-background-color: #b90945;" text="Contacter vendeur" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="14.0" layoutY="17.0" onAction="#retour" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #4285F4;" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="expired" fill="RED" layoutX="616.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="616.0" layoutY="384.0" text="Nombre de vue:" textFill="#48aed0" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Text fx:id="views" layoutX="623.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="101.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
